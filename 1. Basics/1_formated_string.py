@@ -35,3 +35,4 @@ print('invests' in str_cs)
 # length of the string
 str = "hello world, this is python for beginner."
 print(len(str))
+
