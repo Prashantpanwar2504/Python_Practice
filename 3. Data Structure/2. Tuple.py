@@ -41,3 +41,11 @@ print("===================================")
 print(t[-3:])    # (50, 60, 70) from Last 3rd to end
 print(t[:-2])    # (10, 20, 30, 40, 50) from starting to second last.
 
+# Problem: get 3 middle element from the tuple
+
+tupple_test = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+middle = len(tupple_test) // 2
+print(middle)
+print(tupple_test[middle-1: middle+2]) # this range is exclusive at then right hand side.
+
