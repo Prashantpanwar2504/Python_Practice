@@ -50,3 +50,7 @@ for classname, students_list in students.items():
     print(f"{classname} has students:")
     for student in students_list:
         print("   ", student)
+# When asked about this, always mention that dictionaries
+# map keys to values, and if the value is a list,
+# you must iterate twice → first over dictionary keys,
+# then over list items.
