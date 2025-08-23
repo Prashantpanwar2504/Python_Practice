@@ -4,14 +4,14 @@
 # Values can be of any type.
 
 my_dic = {
-    'a' : "one",
-    'b' : "two",
-    'c' : "three",
-    'd' : "four",
-    'e' : "five",
-    'f' : True,
-    'g' : False,
-    'h' : None
+    'a': "one",
+    'b': "two",
+    'c': "three",
+    'd': "four",
+    'e': "five",
+    'f': True,
+    'g': False,
+    'h': None
 }
 print(my_dic)
 # print(my_dic[3]) # Dictionary does not support indexing, unorderes set
@@ -39,7 +39,7 @@ data = {
 for key in data:
     print(f"Items in {key}:")
     for value in data[key]:
-         print("  -", value)
+        print("  -", value)
 # Iterate over all key-value pairs
 for key, value in data.items():
     print(f"{key} -> {value}")
@@ -73,3 +73,71 @@ for classname, students_list in students.items():
 # | `popitem()`       | Remove last item                      | `my_dict.popitem()`                  |
 # | `setdefault(k,v)` | If missing, set key                   | `my_dict.setdefault("salary", 5000)` |
 # | `clear()`         | Empty dictionary                      | `my_dict.clear()`                    |
+
+print("====================================================")
+my_dict4 = {
+    "name": "Alice",
+    "age": 25,
+    "skills": ["Python", "ML"],
+    "city": "Delhi"
+}
+# get(key[, default]) : Safely access value (returns None or default if key is missing).
+print(my_dict4.get("name"))
+print(my_dict4.get("salary"))
+print(my_dict4.get("salary", 23000)) #temp key-value pair
+print(my_dict4)
+
+# keys() : Returns all keys.
+print(my_dict4.keys()) # it can not take any parameter
+
+# values() : return all the value
+print(my_dict4.values())
+
+# items() : Returns all key-value pairs as tuples.
+print(my_dict4.items()) # same as print(my_dict4)
+
+# update({key:value}) : Add or modify items.
+my_dict4.update({"age": 26, "country": "India"})
+print(my_dict4)
+
+# pop(key[, default]) : Remove and return value for the given key.
+print(my_dict4.pop("city"))  # Delhi
+print(my_dict4)
+# popitem() : Removes and returns the last inserted key-value pair.
+print(my_dict4.popitem())
+# ('country', 'India')
+print(my_dict4)
+# setdefault(key[, default]) :
+# If key exists → return its value.
+# If missing → insert with default value.
+print(my_dict4.setdefault("age", 30))     # 26 (already exists)
+print(my_dict4.setdefault("salary", 5000)) # 5000 (added)
+print(my_dict4)
+# {'name': 'Alice', 'age': 26, 'skills': ['Python', 'ML'], 'salary': 5000}
+print("=======")
+# clear() : Removes all items from dictionary.
+my_dict4.clear()
+print(my_dict4)   # {}
+
+
+
+print("==============================================")
+
+students = {
+    "101": {"name": "John", "marks": [80, 90, 85]},
+    "102": {"name": "Emma", "marks": [78, 88, 92]},
+    "103": {"name": "Raj", "marks": [70, 75, 80]}
+}
+
+# My solution
+for roll, details in students.items():
+    print(roll,  sum(details["marks"])/len(details["marks"]))
+
+
+print("--------------------------------")
+# Print each student with average marks
+for roll, details in students.items():
+    avg = sum(details["marks"]) / len(details["marks"])
+    print(f"Roll No: {roll}, Name: {details['name']}, Average: {avg}")
+
+
