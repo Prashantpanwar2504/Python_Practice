@@ -27,21 +27,6 @@ print("====================================")
 # Unordered (before Python 3.7) but insertion-ordered from Python 3.7+.
 # Fast lookups via hash tables.
 
-# Important Methods of Dictionary
-# | Method            | Description                           | Example                              |
-# | ----------------- | ------------------------------------- | ------------------------------------ |
-# | `get(key)`        | Safe access (returns None if missing) | `my_dict.get("age")`                 |
-# | `keys()`          | All keys                              | `my_dict.keys()`                     |
-# | `values()`        | All values                            | `my_dict.values()`                   |
-# | `items()`         | Key-value pairs                       | `my_dict.items()`                    |
-# | `update({...})`   | Merge dicts                           | `my_dict.update({"city":"Delhi"})`   |
-# | `pop(key)`        | Remove & return value                 | `my_dict.pop("age")`                 |
-# | `popitem()`       | Remove last item                      | `my_dict.popitem()`                  |
-# | `setdefault(k,v)` | If missing, set key                   | `my_dict.setdefault("salary", 5000)` |
-# | `clear()`         | Empty dictionary                      | `my_dict.clear()`                    |
-
-
-
 
 # Important Data Scinece interview question, often asked question in the interview.
 # Iterating a List inside a Dictionary
@@ -76,4 +61,15 @@ for classname, students_list in students.items():
 # you must iterate twice → first over dictionary keys,
 # then over list item.
 
-print("Hello World.")
+# Important Methods of Dictionary
+# | Method            | Description                           | Example                              |
+# | ----------------- | ------------------------------------- | ------------------------------------ |
+# | `get(key)`        | Safe access (returns None if missing) | `my_dict.get("age")`                 |
+# | `keys()`          | All keys                              | `my_dict.keys()`                     |
+# | `values()`        | All values                            | `my_dict.values()`                   |
+# | `items()`         | Key-value pairs                       | `my_dict.items()`                    |
+# | `update({...})`   | Merge dicts                           | `my_dict.update({"city":"Delhi"})`   |
+# | `pop(key)`        | Remove & return value                 | `my_dict.pop("age")`                 |
+# | `popitem()`       | Remove last item                      | `my_dict.popitem()`                  |
+# | `setdefault(k,v)` | If missing, set key                   | `my_dict.setdefault("salary", 5000)` |
+# | `clear()`         | Empty dictionary                      | `my_dict.clear()`                    |
