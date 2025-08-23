@@ -74,6 +74,6 @@ for classname, students_list in students.items():
 # When asked about this, always mention that dictionaries
 # map keys to values, and if the value is a list,
 # you must iterate twice → first over dictionary keys,
-# then over list items.
+# then over list item.
 
 print("Hello World.")
