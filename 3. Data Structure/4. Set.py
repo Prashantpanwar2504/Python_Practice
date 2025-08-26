@@ -60,6 +60,46 @@ while s:
     print("Processing:", fruit)
 
 print("Set is now empty:", s)
+print("========================")
+
+# clear : to clear or empty a set.
+s.clear()
+print(s) # it will return set()
+print("=========================")
+s = {"apple", "banana", "cherry"}
+# union : combine two set.
+print(my_set.union(s))
+set1 = {1,2,3, 4, 6}
+set2 = {3,4,5, 8,3}
+print(set1.union(set2)) # {1, 2, 3, 4, 5, 6, 8}
+print(set1.intersection(set2)) # {3, 4}
+print(set1.difference(set2)) # {1, 2, 6}
+print(set2.difference(set1)) # {8, 5}
+# symmetric_difference : Returns a new set with elements that
+# are in either set, but not in both
+# In math terms → (A∪B)−(A∩B).
+print(set1.symmetric_difference(set2))
+# example
+A = {1, 2, 3, 4}
+B = {3, 4, 5, 6}
+print("A: ", A, "B:", B)
+result = A.symmetric_difference(B)
+print(result)   # {1, 2, 5, 6}
+print("=========================")
+# issubset : check of b is the subset of a
+a = {1,2,3,4,5,6,7,8,9}
+b = {3,5,8,1}
+print(b.issubset(a)) # b is the subset of a. that's we are getting True.
+print(a.issuperset({})) # a is the superset of empty set {}
+print(a.issuperset(b)) # a is the superset of b
+print(a.issuperset(a)) # is also the superset of a itself.
+print("==========================")
+
+# isdisjoint: check if there is not any common elements.
+c = {'b'}
+print(a.isdisjoint(c)) # will get True because a and c set does not hab=ve anything in common.
+
+
 
 
 
