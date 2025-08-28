@@ -66,3 +66,12 @@ def my_function5(list):
 
 numbers = [1,2,3,4,5, "d",6,7,8,9]
 my_function5(numbers)
+
+
+print("---------------------------------")
+
+def function6(i):
+    i%2 == 0
+
+function6(91)
+print(function6(35)) # will return the value of none, if no return given
