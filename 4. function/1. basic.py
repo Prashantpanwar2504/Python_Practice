@@ -34,7 +34,7 @@ print("--------------------------------")
 # Arbitrary Arguments, *args : If you do not know how many arguments that will be
 # passed into your function, add a * before the parameter name in the function definition.
 
-def myfunction2(*args):
+def myfunction2(*args): # positonal arguements
     print("The youngest childrens are :" + args[3])
 
 
@@ -43,7 +43,7 @@ myfunction2("ram", "prashant", "rahul", "aman")
 
 # Arbitrary Keyword Arguments, **kwargs : If you do not know how many keyword arguments that will be passed into your function,
 # add two asterisk: ** before the parameter name in the function definition.
-def myfunction3(**kwargs):
+def myfunction3(**kwargs): # keyword arguments
     print("My last name is " + kwargs["lname"])
 
 myfunction3(fname="Prashant", lname="Panwar")
@@ -75,3 +75,23 @@ def function6(i):
 
 function6(91)
 print(function6(35)) # will return the value of none, if no return given
+
+print("------------------------------------")
+# Return Values
+def my_function8(x):
+  return 5 ** x
+
+print(my_function8(3))
+print(my_function8(5))
+print(my_function8(9))
+
+print("------------------------------------")
+# Positional-Only Arguments : You can specify that a function can have ONLY positional arguments, or ONLY keyword arguments.
+def my_function9(a,b,c,/,d,e):
+  print(a)
+  print(b)
+  print(c)
+  print(d)
+  print(e)
+
+my_function9( a = 'a', 'b', 'c', 'd', 'e') # SyntaxError: positional argument follows keyword argument
