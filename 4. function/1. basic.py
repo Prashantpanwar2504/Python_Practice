@@ -87,11 +87,13 @@ print(my_function8(9))
 
 print("------------------------------------")
 # Positional-Only Arguments : You can specify that a function can have ONLY positional arguments, or ONLY keyword arguments.
-def my_function9(a,b,c,/,d,e):
-  print(a)
-  print(b)
-  print(c)
-  print(d)
-  print(e)
+def my_function9(a,b,c,d,e):
+  print(a, b, c, d, e)
 
-my_function9( a = 'a', 'b', 'c', 'd', 'e') # SyntaxError: positional argument follows keyword argument
+my_function9( a='a', c ='b', b='c', e='d', d='e')
+
+# SyntaxError: positional argument follows keyword argument
+def my_function10(a,b,c,/,d=2,e=4):
+    print(a, b, c, d, e)
+
+my_function10(a='a', 'b', 'c', 'd', 'e')
