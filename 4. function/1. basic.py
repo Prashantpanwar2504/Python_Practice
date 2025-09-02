@@ -93,7 +93,53 @@ def my_function9(a,b,c,d,e):
 my_function9( a='a', c ='b', b='c', e='d', d='e')
 
 # SyntaxError: positional argument follows keyword argument
-def my_function10(a,b,c,/,d=2,e=4):
+def my_function10(a,b,c,/,d=1,e=2):
     print(a, b, c, d, e)
 
-my_function10(a='a', 'b', 'c', 'd', 'e')
+# my_function10('a', 'c') # error
+my_function10('a', 'b', 'c') # run
+
+print("===========================================")
+### Variable Length Arguments
+## Positional And Keywords arguments
+
+def print_numbers(*pan): # passing a tuple
+    print(type(pan))
+    for number in pan:
+        print(number)
+
+print_numbers(1,2,3,4,5,6,7,8,"Prashant")
+
+
+print("===================================================")
+## Positional arguments
+def print_numbers(*args): # passing a tuple
+    print(type(args))
+    for number in args:
+        print(number)
+
+print_numbers(1,2,3,4,5,6,7,8,"Krish")
+
+print("---------------------------------------------------")
+
+# k eyworded Arguemnt
+
+def print_details(**kwargs): # passing a Dictionary.
+    print(type(kwargs))
+    for key, value in kwargs.items():
+        print(f"{key} : {value}")
+
+print_details(name = "Prashant", course = "MBA", year="1")
+
+print("--------------------------------------")
+
+def print_details2(*args, **kwargs): # passing tuple and Dictionary to the method.
+    print(type(args), type(kwargs))
+
+    for var in args:
+        print(f"Positional Arguements : {var}")
+
+    for key, value in kwargs.items():
+        print(f"{key} : {value}")
+
+print_details2(1,2,3,4,5,6, name = "Prashant", course="MBA", year = 1, college = "GLA")
