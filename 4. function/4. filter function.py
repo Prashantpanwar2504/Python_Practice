@@ -52,3 +52,4 @@ print(age_greater_24)
 
 # for the name of the contribution tothe github profile.
 # Don't know what i am doing with my life.
+#10 days without any contribution.
