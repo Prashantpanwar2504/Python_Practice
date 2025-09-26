@@ -48,8 +48,3 @@ print(age_greater_24)
 # It is commonly used for data cleaning, filtering objects,
 # and removing unwanted elements from lists.By mastering filter(),
 # you can write more concise and efficient code for processing and manipulating collections in Python.
-
-
-# for the name of the contribution tothe github profile.
-# Don't know what i am doing with my life.
-#10 days without any contribution.
