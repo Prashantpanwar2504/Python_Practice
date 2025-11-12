@@ -31,6 +31,20 @@ with open('demo.txt', 'r') as file3:
         print("--------------")
 
 
+# Writing a file with overwriting, old data will be gone
+
+with open('demo.txt', 'w') as file4:
+    file4.write('Hello  this is the new data\n')
+    # content=file.read()
+    # print(content)
+
+with open('demo.txt', 'r') as file5:
+    content = file5.read()
+    print(content)
 
 
-print("===============")
+#  right now we are not abl;e to understand this concept to we will come on this later and will continue.
+#  right now you should focus on that your bus is about to leave soon so please start packing your bag.
+# thank & Regard
+#  Prashant Panwar
+#  A succesful push to git server
