@@ -43,4 +43,48 @@ except Exception as e1:
     print("this block of code will handle all the exception ")
 
 
+print("--------------------------------------")
 
+try:
+    num=int(input("Enter a number"))
+    result=10/num
+except ValueError:
+    print("This is not a valid number") # if you entered string or character then this exception will print
+except ZeroDivisionError: # if you will comment this part then still Main Exception will catch the error.
+    print("enter denominator greater than 0")   # if you insert 0 then this exception will print
+except Exception as ex:
+    print(ex)
+
+
+
+print("-----------------------")
+
+## try,except,else block
+try:
+    num = int(input("Enter a number:"))
+    result = 10 / num
+except ValueError:
+    print("That's not a valid number!")
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+except Exception as ex:
+    print(ex)
+else:
+    print(f"the result is {result}")
+
+print("----------------------------")
+
+## try,except,else and finally
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+except ValueError:
+    print("That's not a valid number!")
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+except Exception as ex:
+    print(ex)
+else:
+    print(f"The result is {result}")
+finally:
+    print("Execution complete.")
